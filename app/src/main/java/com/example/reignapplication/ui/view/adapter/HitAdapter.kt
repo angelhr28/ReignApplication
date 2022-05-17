@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.reignapplication.domain.model.Hit
 import com.example.reignapplication.ui.view.viewholder.ItemCardViewHolder
 
-class HitAdapter(private val listener: (String) -> Unit) : RecyclerView.Adapter<ItemCardViewHolder>() {
+class HitAdapter(private val listener: (String) -> Unit) :
+    RecyclerView.Adapter<ItemCardViewHolder>() {
 
     private var items: MutableList<Hit> = mutableListOf()
 

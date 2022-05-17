@@ -9,12 +9,10 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.reignapplication.databinding.ActivityMainBinding
-import com.example.reignapplication.domain.model.Hit
 import com.example.reignapplication.ui.view.adapter.HitAdapter
 import com.example.reignapplication.ui.viewmodel.HitViewModel
 import com.example.reignapplication.utils.SwipeHelper
 import com.example.reignapplication.utils.isConnected
-import com.example.reignapplication.utils.toJson
 import com.example.reignapplication.utils.toast
 import dagger.hilt.android.AndroidEntryPoint
 

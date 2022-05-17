@@ -38,8 +38,6 @@ class DetailHitActivity : AppCompatActivity() {
                 onBackPressed()
             }
         }
-
-
     }
 
     override fun onBackPressed() {
