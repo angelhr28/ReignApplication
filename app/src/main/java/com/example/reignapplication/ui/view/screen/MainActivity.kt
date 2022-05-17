@@ -77,10 +77,10 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
         }
     }
 
-    private fun toDetail(hit: Hit) {
+    private fun toDetail(url: String) {
         val intent = Intent(this, DetailHitActivity::class.java)
         intent.apply {
-            putExtra("hit", hit.toJson())
+            putExtra("url", url)
             startActivity(this)
         }
 

@@ -4,12 +4,10 @@ import android.os.Bundle
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.reignapplication.databinding.ActivityDetailHitBinding
-import com.example.reignapplication.domain.model.Hit
-import com.example.reignapplication.utils.parseJson
 
 class DetailHitActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailHitBinding
-    private lateinit var hit: Hit
+    private lateinit var url: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +19,7 @@ class DetailHitActivity : AppCompatActivity() {
 
     private fun initData() {
         intent.extras?.apply {
-            getString("hit")?.let {
-                hit = parseJson(it)
-            }
+            url = getString("url") ?: ""
         }
     }
 
@@ -32,7 +28,7 @@ class DetailHitActivity : AppCompatActivity() {
         binding.apply {
             webView.webViewClient = WebViewClient()
 
-            webView.loadUrl(hit.url ?: "")
+            webView.loadUrl(url)
 
             webView.settings.javaScriptEnabled = true
 
